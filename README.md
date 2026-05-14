@@ -1,97 +1,93 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# AttendWise - Smart Attendance Tracker
 
-# Getting Started
+![AttendWise Logo](https://lh3.googleusercontent.com/aida-public/AB6AXuBXMPpsKadhXRdMGAaylAbciwThbrekMR581REsE_psWSVb14M54V88_ZJyTWfO8Meh_8VoxOZLVv20v8KyfftzhN2AKZCpcQYzyVgWZYJR8oIhFd0GhVorY4tudLqPy5KwtGI238RgSr-DZKV7cTo4ADwEe59WBzbwmvkwGUEXaFQ-6sF2bm39GjVCpBvsuIGq7cR6uFyPlcYGT5sN0XB2RgaJNyoR7rGDVoPNTZGp-fy4DOcdOPm-OqVaurSTXe6MtAeQJpeVqcB3)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+AttendWise is a sophisticated, natural-looking mobile application designed to simplify and modernize student attendance tracking. Built with React Native and powered by the **Academic Arbor** design system, it offers a seamless and premium experience for both students and academic institutions.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🌿 The Academic Arbor Design System
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+AttendWise features a unique design language that emphasizes trust, growth, and academic rigor.
+- **Palette**: Forest Greens, Sage, and Dusty Rose for an organic yet professional feel.
+- **Typography**: Clean, readable Inter font system for optimal information density.
+- **Experience**: Smooth animations, glassmorphism elements, and intuitive layouts.
 
-```sh
-# Using npm
+---
+
+## 🚀 Key Features
+
+- **Secure Authentication**: Robust login flow with device-bound session security.
+- **Smart QR Scanning**: Forensic-grade QR scanner for instant attendance logging.
+- **Attendance Dashboard**: Beautifully visualized statistics and progress tracking.
+- **Academic Profile**: Comprehensive student identity and course enrollment management.
+- **Theme Adaptive**: Modern light-mode aesthetic with planned dark-mode support.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Framework**: [React Native](https://reactnative.dev/) (v0.85)
+- **State & Storage**: [AsyncStorage](https://github.com/react-native-async-storage/async-storage)
+- **Networking**: [Axios](https://axios-http.com/)
+- **UI Components**: Custom-built components following the Academic Arbor spec.
+- **Design Platform**: [Stitch](https://stitch.com/)
+
+---
+
+## 📁 Project Structure
+
+```text
+AW/
+├── src/
+│   ├── components/       # Redesigned UI Components (Login, Home, Scanner, Profile)
+│   ├── theme/            # Academic Arbor Design tokens (DesignSystem.ts)
+│   └── assets/           # Local images and branding assets
+├── android/              # Native Android configuration
+├── ios/                  # Native iOS configuration
+├── App.tsx               # Main application controller and navigation
+└── index.js              # Entry point
+```
+
+---
+
+## 🏁 Getting Started
+
+### 1. Environment Setup
+Ensure you have the [React Native Environment](https://reactnative.dev/docs/set-up-your-environment) configured for Android and/or iOS development.
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Start Metro Bundler
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+### 4. Run Application
+**Android:**
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+**iOS:**
+```bash
+# Install pods first
+cd ios && pod install && cd ..
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🛡️ Security & Privacy
+AttendWise prioritizes student data privacy. All attendance logs are synchronized securely with the central institution portal via encrypted API endpoints.
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 📄 License
+This project is proprietary and built for the AttendWise ecosystem.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+*Nurturing Intellectual Growth through Smart Technology.*

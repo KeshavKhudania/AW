@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-lowest": "#ffffff",
+                  "secondary": "#7d5450",
+                  "inverse-primary": "#b4cdae",
+                  "tertiary-container": "#374023",
+                  "surface-container-highest": "#e2e3de",
+                  "on-surface-variant": "#434841",
+                  "secondary-fixed": "#ffdad6",
+                  "secondary-container": "#fec7c2",
+                  "on-tertiary-fixed": "#171e06",
+                  "surface-container-low": "#f3f4ef",
+                  "on-primary": "#ffffff",
+                  "error-container": "#ffdad6",
+                  "surface": "#f9faf5",
+                  "tertiary": "#222a10",
+                  "on-tertiary-container": "#a2ac87",
+                  "tertiary-fixed": "#dde7bf",
+                  "on-error-container": "#93000a",
+                  "on-primary-container": "#96ae91",
+                  "error": "#ba1a1a",
+                  "surface-bright": "#f9faf5",
+                  "on-secondary-fixed": "#301310",
+                  "surface-container-high": "#e7e9e4",
+                  "on-tertiary-fixed-variant": "#414a2d",
+                  "outline": "#747970",
+                  "surface-container": "#edeee9",
+                  "inverse-on-surface": "#f0f1ec",
+                  "surface-variant": "#e2e3de",
+                  "on-secondary-fixed-variant": "#633d39",
+                  "background": "#f9faf5",
+                  "tertiary-fixed-dim": "#c1cba4",
+                  "outline-variant": "#c3c8be",
+                  "secondary-fixed-dim": "#efbab4",
+                  "primary-container": "#2d422b",
+                  "on-background": "#1a1c19",
+                  "primary": "#182c17",
+                  "on-primary-fixed": "#0c200c",
+                  "surface-tint": "#4e644b",
+                  "primary-fixed-dim": "#b4cdae",
+                  "on-secondary-container": "#7a514d",
+                  "on-surface": "#1a1c19",
+                  "on-tertiary": "#ffffff",
+                  "on-error": "#ffffff",
+                  "inverse-surface": "#2e312e",
+                  "primary-fixed": "#d0eac9",
+                  "on-secondary": "#ffffff",
+                  "on-primary-fixed-variant": "#374c34",
+                  "surface-dim": "#d9dad6"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "unit": "4px",
+                  "max-width": "1280px",
+                  "margin-desktop": "48px",
+                  "gutter": "24px",
+                  "margin-mobile": "16px"
+          },
+          "fontFamily": {
+                  "label-lg": ["Inter"],
+                  "display-lg": ["Inter"],
+                  "label-sm": ["Inter"],
+                  "headline-md": ["Inter"],
+                  "headline-lg-mobile": ["Inter"],
+                  "body-md": ["Inter"],
+                  "headline-lg": ["Inter"],
+                  "body-lg": ["Inter"]
+          },
+          "fontSize": {
+                  "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                  "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                  "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                  "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #f9faf5;
+      font-family: 'Inter', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 bg-surface border-b border-outline-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="student profile" class="w-full h-full object-cover" data-alt="A close-up professional portrait of a university student with a friendly expression. The lighting is soft and natural, suggesting an indoor campus environment. The overall aesthetic is clean and modern, following the sophisticated academic arbor style with subtle green and warm neutral tones in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcNhOh-n9bbI985MmFuOARriPorrmSMJq8iIulx6-BoWy73HLyqq5dNhljuj4Xbt6Y-FoZpCLpKCZd2hztyWTmgk_3LhcQSCKpTDeKhxlgiFrNFj3nJw-vzJeopsAud_KlbhVCahZKzfqSNNxe2w_BopmZpET1mcdFcfNPRze-tpGyCwhXYs4p_s4_7_rtgJA7AKYINWmU9AUjVFW2CHJXVpaaiASS9FxYSzHMI8T7r0Cfz7zzf61lQ0Wt9C7AJwYSnftKYj3jvlyf"/>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-primary">AttendWise</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-low transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-32 px-margin-mobile max-w-max-width mx-auto">
+<!-- Hero Section / Title -->
+<section class="mb-8">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">My Active Courses</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Track your academic progress and attendance status for the Spring 2024 semester.</p>
+</section>
+<!-- Bento Grid Layout for Courses -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Highlight Card (Larger) -->
+<article class="md:col-span-8 bg-surface-container-lowest rounded-xl p-6 border-b-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col h-full justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-1 block">CHM-402</span>
+<h2 class="font-headline-md text-headline-md text-primary">Advanced Organic Chemistry</h2>
+</div>
+<div class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm">Key Course</span>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-outline">person</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Prof. Eleanor Vance</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="font-label-lg text-label-lg text-primary">Attendance Standing</span>
+<span class="font-headline-md text-headline-md text-primary">94%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%] rounded-full"></div>
+</div>
+<p class="font-label-sm text-label-sm text-on-tertiary-fixed-variant">You've missed 1 session this month. Keep it up!</p>
+</div>
+</div>
+</article>
+<!-- Sidebar Mini Card -->
+<article class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 border-b-4 border-outline-variant shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-1 block">MAT-205</span>
+<h2 class="font-headline-md text-headline-md text-primary">Linear Algebra</h2>
+<div class="flex items-center gap-3 mt-2 mb-6">
+<span class="material-symbols-outlined text-outline">person</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Dr. Marcus Thorne</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="font-label-lg text-label-lg text-on-surface-variant">Attendance</span>
+<span class="font-body-lg text-body-lg font-bold text-primary">82%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%] rounded-full"></div>
+</div>
+</div>
+</article>
+<!-- Standard Grid Card -->
+<article class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 border-b-4 border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-1 block">BIO-110</span>
+<h2 class="font-headline-md text-headline-md text-primary">Molecular Biology</h2>
+<div class="flex items-center gap-3 mt-2 mb-6">
+<span class="material-symbols-outlined text-outline">person</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Prof. Sarah Jenkins</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Attendance</span>
+<span class="font-label-sm text-label-sm font-bold">88%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%] rounded-full"></div>
+</div>
+</div>
+</article>
+<!-- Asymmetric Card with Image Background Accents -->
+<article class="md:col-span-4 bg-surface-container-lowest rounded-xl overflow-hidden border-b-4 border-secondary shadow-sm hover:shadow-md transition-shadow relative">
+<div class="p-6 relative z-10">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-1 block">LIT-301</span>
+<h2 class="font-headline-md text-headline-md text-primary">Victorian Literature</h2>
+<div class="flex items-center gap-3 mt-2 mb-6">
+<span class="material-symbols-outlined text-outline">person</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Dr. Julian Barnes</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Status: At Risk</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">65%</span>
+</div>
+<div class="h-2 w-full bg-secondary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[65%] rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-container/20 rounded-bl-full -mr-8 -mt-8"></div>
+</article>
+<!-- Final Grid Card -->
+<article class="md:col-span-4 bg-surface-container-lowest rounded-xl p-6 border-b-4 border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<span class="font-label-sm text-label-sm text-secondary uppercase mb-1 block">PSY-220</span>
+<h2 class="font-headline-md text-headline-md text-primary">Cognitive Psychology</h2>
+<div class="flex items-center gap-3 mt-2 mb-6">
+<span class="material-symbols-outlined text-outline">person</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Prof. Alan Turing</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Attendance</span>
+<span class="font-label-sm text-label-sm font-bold">91%</span>
+</div>
+<div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[91%] rounded-full"></div>
+</div>
+</div>
+</article>
+</div>
+<!-- Attendance Stats / Quick Summary Section -->
+<section class="mt-12 p-6 bg-tertiary text-on-tertiary rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md">Overall Attendance: 84%</h3>
+<p class="font-label-lg text-label-lg text-on-tertiary-container">You are above the 75% graduation requirement.</p>
+</div>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed font-label-lg text-label-lg px-6 py-3 rounded-full hover:bg-inverse-primary transition-colors active:scale-95">
+        View Full Report
+      </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-2 pb-safe px-4 bg-surface-container shadow-[0_-4px_12px_rgba(24,44,23,0.08)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1.5 transition-all scale-95 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1.5 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm">Scan QR</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1.5 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+</body></html>
